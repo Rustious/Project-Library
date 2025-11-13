@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.dashboardController">
+   <children>
+      <AnchorPane prefHeight="482.0" prefWidth="650.0">
+         <children>
+            <Label alignment="CENTER" layoutX="214.0" layoutY="14.0" prefHeight="27.0" prefWidth="222.0" text="User Dashboard">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Label>
+            <Label fx:id="welcomeLabel" alignment="CENTER" layoutX="214.0" layoutY="41.0" prefHeight="27.0" prefWidth="222.0">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Button fx:id="browsebooksButton" layoutX="361.0" layoutY="406.0" mnemonicParsing="false" onAction="#handleBrowseBooks" prefHeight="25.0" prefWidth="222.0" text="Browse Books" />
+            <Button fx:id="logoutButton" layoutX="67.0" layoutY="406.0" mnemonicParsing="false" onAction="#handleLogout" prefHeight="25.0" prefWidth="222.0" text="Logout" />
+            <Button fx:id="vieworderButton" layoutX="361.0" layoutY="351.0" mnemonicParsing="false" onAction="#handleViewOrders" prefHeight="25.0" prefWidth="222.0" text="View Orders" />
+            <Button fx:id="editprofileButton" layoutX="67.0" layoutY="351.0" mnemonicParsing="false" onAction="#handleEditProfile" prefHeight="25.0" prefWidth="222.0" text="Edit Profile" />
+            <TableView fx:id="popularBooksList" layoutX="67.0" layoutY="84.0" prefHeight="248.0" prefWidth="516.0">
+              <columns>
+                 <TableColumn fx:id="bookTitleColumn" prefWidth="250.39997100830078" text="Book Title" />
+                 <TableColumn fx:id="bookAuthorColumn" prefWidth="175.20001220703125" text="Author" />
+                 <TableColumn fx:id="amountSoldColumn" prefWidth="91.19998168945312" text="Sold Copies" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </children>
+</HBox>
